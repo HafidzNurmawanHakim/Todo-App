@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&family=M+PLUS+1+Code:wght@300;400&family=M+PLUS+2:wght@300&family=Poppins:wght@200;300;400&display=swap");
+.todoApp {
+  width: 100%;
+  height: 100vh;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  /* background: url("./img/old-paper.jpg") no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; */
+}
+
+img.bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  padding: 10px 20px 20px 40px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  border-radius: 4px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: calc(2vw + 1vh);
+  margin: 20px 0 40px;
+  font-family: "Corinthia", cursive;
+}
+section .form {
+  display: flex;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+span .fa-times {
+  color: #000;
+  margin-right: 5px;
+  z-index: 99;
+  font-size: 30px;
+  opacity: 0;
+  transition: 1s;
+}
+
+#inputTodo {
+  height: 30px;
+  width: 0px;
+  border-radius: 3px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  position: relative;
+  transition: 0.8s;
+  transition-timing-function: cubic-bezier(0.36, 0, 0.63, 0.99);
+}
+
+button .fa-plus {
+  display: block;
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.form .btn-submit {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: tomato;
+  position: absolute;
+  left: 3px;
+  z-index: 99;
+  transition: 0.8s;
+  transition-timing-function: cubic-bezier(0.36, 0, 0.63, 0.99);
+}
+.input {
+  position: relative;
+  width: 30vw;
+  height: 10vh;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.btn-submit:hover {
+  transform: scale(0.9);
+}
+#cheklist {
+  opacity: 1;
+  z-index: 99;
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+form .alert {
+  color: red;
+  display: none;
+  position: absolute;
+}
+
+.alert.active {
+  display: inherit;
+}
+
+.tabel ul {
+  width: 100%;
+  box-sizing: border-box;
+}
+li {
+  background-color: #ad9066;
+  list-style: circle;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  line-height: 2;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Corinthia", cursive;
+  font-size: calc(1.5vw + 1vh);
+  transition: 0.8s;
+}
+
+li:last-child {
+  border-bottom: 3px solid #333;
+}
+
+button.hapus {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(218, 165, 32);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button.hapus:active {
+  transform: scale(0.9);
+  background-color: rgb(136, 101, 11);
+}
+
+#successCheck {
+  opacity: 0;
+}
+#successCheck::before {
+  content: "";
+  width: 800px;
+  height: 40px;
+  position: relative;
+  right: 920px;
+  bottom: 16px;
+  display: inline-block;
+}

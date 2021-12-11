@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List App</title>
+  </head>
+  <body>
+    <div class="todoApp">
+      <img src="./img/old-paper.jpg" alt="old-paper" class="bg" />
+      <div class="container">
+        <h1>SCHEDULE</h1>
+        <section>
+          <form action="#" class="form">
+            <div class="input">
+              <span><i class="fas fa-times"></i></span>
+              <button type="submit" class="btn-submit"><i class="fas fa-plus"></i></button>
+
+              <input type="checkbox" id="cheklist" onclick="check(this)" />
+              <div>
+                <input type="text" onchange="handleChange()" id="inputTodo" />
+                <span class="alert">Masukkan Schedule!!!</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <section class="tabel">
+          <ul class="todo-list"></ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
