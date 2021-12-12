@@ -11,10 +11,6 @@
   height: 100vh;
   padding: 30px 50px;
   box-sizing: border-box;
-  /* background: url("./img/old-paper.jpg") no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover; */
 }
 
 img.bg {
@@ -122,6 +118,8 @@ form .alert {
   color: red;
   display: none;
   position: absolute;
+  font-size: calc(1vw + 0.7vh);
+  margin-top: 10px;
 }
 
 .alert.active {
@@ -135,14 +133,14 @@ form .alert {
 li {
   background-color: #ad9066;
   list-style: circle;
-  padding: 10px 20px;
+  padding: 10px calc(0.5em + 1vw);
   border-radius: 2px;
   margin-bottom: 5px;
   line-height: 2;
   display: flex;
   justify-content: space-between;
   font-family: "Corinthia", cursive;
-  font-size: calc(1.5vw + 1vh);
+  font-size: calc(1.8vw + 0.6em);
   transition: 0.8s;
 }
 
@@ -175,4 +173,18 @@ button.hapus:active {
   right: 920px;
   bottom: 16px;
   display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .todoApp {
+    padding: calc(2rem + 3vw) calc(1vw + 1rem);
+  }
+  .container {
+    padding: 10px calc(1em + 1.5vw);
+  }
+
+  .input {
+    padding-left: 0px;
+    left: calc(-1vw - 1rem);
+  }
 }
